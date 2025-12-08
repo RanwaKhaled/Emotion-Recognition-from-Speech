@@ -17,14 +17,14 @@ sentiment = "" # global var containing the detected sentiment
 # Load the trained model with custom objects
 custom_objects = {'Orthogonal': keras.initializers.Orthogonal}
 emotion_model = keras.models.load_model(
-    "emotion_lstm_model.h5",
+    "models/emotion_lstm_model.h5",
     custom_objects=custom_objects,
     compile=False
 )
 
 print("Emotion Detection Model loaded")
 # standard scaler model for the data
-with open('scaler_params.json', 'r') as f:
+with open('models/scaler_params.json', 'r') as f:
     params = json.load(f)
 
 scaler = StandardScaler()
@@ -245,6 +245,7 @@ def layout(page, go_to_speaker):
             spacing= 30,
             alignment= ft.MainAxisAlignment.CENTER
         )
+
 
 
 #ft.app(target = main, assets_dir="assets")
