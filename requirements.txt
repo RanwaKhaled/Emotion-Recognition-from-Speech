@@ -1,0 +1,11 @@
+flet
+numpy
+tensorflow
+librosa
+praat-parselmouth
+scikit-learn
+torch==2.1.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+torchaudio==2.1.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+speechbrain
+flet-audio-recorder
+flet-audio
