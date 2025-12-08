@@ -24,12 +24,12 @@ classifier = EncoderClassifier.from_hparams(
 )
 print("loaded embedding model")
 # load pca model
-PCAmodel_name = 'pca_model.pkl'
+PCAmodel_name = 'models/pca_model.pkl'
 with open(PCAmodel_name, 'rb') as file:
     pca = pickle.load(file)
 print("loaded pca model")
 # load logistic regression model
-LRmodel_name = 'speakerID_model.pkl'        
+LRmodel_name = 'models/speakerID_model.pkl'        
 LRmodel = pickle.load(open(LRmodel_name, 'rb'))
 print("loaded LR model")
 
@@ -277,4 +277,5 @@ def layout(page, go_to_sentiment):
         ],
             spacing= 30,
             alignment= ft.MainAxisAlignment.CENTER
+
         )
